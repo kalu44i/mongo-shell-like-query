@@ -33,7 +33,7 @@ class MongoQueryParser {
 
       val formattedQueryString = new MongoQueryCleanser().clean(queryString)
 
-      println("formatted query: " + formattedQueryString)
+//      println("formatted query: " + formattedQueryString)
 
       val findQueries: List[Query] = findPattern.findAllIn(formattedQueryString).toList.map(q => {
         val findContentPattern(findQueryString) = q;
